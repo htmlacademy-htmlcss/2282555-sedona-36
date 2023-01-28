@@ -6,13 +6,11 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="logo-link" href="#">
         <img class="logo" src="" alt="Логотип города Седона">
-       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <span>Главная</span>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О седоне</a>
@@ -23,7 +21,9 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
@@ -99,15 +99,15 @@
       <section class="mailing">
         <h2 class="mailing-title">Подпишитесь на рассылку</h2>
         <p class="mailing-form">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribtion-form" action="#" method="post">
-          <input class="email-form" type="email" name="newsletter-email" placeholder="Ваш email">
-          <button  class ="button-submit" type="submit">Отправить</button>
+        <form class="subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="email-form" type="email" name="newsletter-email" placeholder="Ваш email" required>
+          <button class="button-submit" type="submit">Отправить</button>
         </form>
       </section>
  </main>
  <footer class="page-footer">
-  <section class="social network">
-  <h3 class="visually-hidden">Социальные сети</h3>
+  <section class="Contacts">
+  <h2 class="visually-hidden">Социальные сети</h2>
   <ul class="footer-social-list">
     <li class="footer-social-item">
       <a class="button" href="https://vk.com/htmlacademy">
@@ -125,15 +125,13 @@
       </a>
     </li>
   </ul>
-</section>
-<section class="phone number">
-  <h3 class="visually-hidden">Контактный номер телефона</h3>
+  <h2 class="visually-hidden">Контактный номер телефона</h2>
   <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-</section>
-<section class="html.academy">
-  <h3 class="visually-hidden">html.academy</h3>
-  <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
-</section>
- </footer>
+  <h2 class="visually-hidden">html.academy</h2>
+  <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+    <img class="html-academy-logo" src="" alt="Логотип академии">
+  </a>
+ </section>
+</footer>
 </body>
 </html>
