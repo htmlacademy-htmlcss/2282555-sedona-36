@@ -17,16 +17,20 @@
             <li class="navigation-item">
               <a class="navigation-link" href="#">О седоне</a>
             </li>
-            <li class="navigation-item">Ы
+            <li class="navigation-item">
               <span>Гостиницы</span>
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+              <a class="navigation-link" href="#">
+                <span class="visually-hidden">Поиск</span>
+              </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
+              <a class="navigation-link" href="#">
+                <span class="visually-hidden">Избранное</span>
+              </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">Хочу сюда!</a>
@@ -110,9 +114,9 @@
                         <label class="visually-hidden" for="price-number-max">Максимальная стоимость число</label>
                         <input type="number" id="price-number-max" placeholder="до">
                         <label class="visually-hidden" for="price-range-min">Минимальная стоимость ползунок</label>
-                        <input type="range" id="price-range-min" min="#" max="#" step="">
+                        <input type="range" id="price-range-min" min="1000" max="10000" step="1000">
                         <label class="visually-hidden" for="price-range-max">Максимальная стоимость ползунок</label>
-                        <input type="range" id="price-range-max" min="#" max="#" step="">
+                        <input type="range" id="price-range-max" min="1000" max="10000" step="1000">
                         </fieldset>
                   <button class="button" type="submit">Примениить</button>
                   <button class="button" type="reset">Сбросить</button>
@@ -121,13 +125,14 @@
         <section class="product-catalog">
         <h2 class="visually-hidden">Cписок гостиниц</h2>
         <p>Найдено гостиниц:</p>
-        <form>
+        <form class="catalog-sorting">
         <label class="visually-hidden" for="sorting">Сортировка</label>
         <select class="select-control" id="sorting">
             <option value="popular">Сначала популярное</option>
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
         </select>
+        <button class="visually-hidden" type="submit">Сортировать</button>
       </form>
           <a href="#" class="button button-light">
             <span class="visually-hidden">Показать карточки</span>
@@ -221,7 +226,7 @@
       </main>
       <footer class="page-footer">
         <section class="Contacts">
-          <h2 class="visually-hidden">Социальные сети</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="button" href="https://vk.com/htmlacademy">
@@ -239,9 +244,7 @@
               </a>
             </li>
           </ul>
-          <h2 class="visually-hidden">Контактный номер телефона</h2>
           <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-          <h2 class="visually-hidden">html.academy</h2>
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">
             <img class="html-academy-logo" src="images/logo_htmlacademy.svg" alt="Логотип академии" width="115" height="33">
           </a>
