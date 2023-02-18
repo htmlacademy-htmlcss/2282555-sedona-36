@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="page-container">
+    <div class="page-container ">
       <header class="page-header">
         <a class="logo-link" href="index.html">
           <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона" width="140" height="70">
@@ -131,25 +131,27 @@
           </div>
           <section class="product-catalog">
             <h2 class="visually-hidden">Cписок гостиниц</h2>
-            <p class="heading-two">Найдено гостиниц:</p>
-            <form class="catalog-sorting">
-              <label class="visually-hidden" for="sorting">Сортировка</label>
-              <select class="select-control" id="sorting">
-                <option value="popular">Сначала популярное</option>
-                <option value="cheap">Сначала дешёвое</option>
-                <option value="expensive">Сначала дорогое</option>
-              </select>
-              <button class="visually-hidden" type="submit">Сортировать</button>
-            </form>
-            <a href="#" class="button button-light">
-              <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать на всю страницу</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать список</span>
-            </a>
+            <div class="sorting-block">
+              <p class="sorting-result heading-two">Найдено гостиниц: 38</p>
+              <form class="catalog-sorting">
+                <label class="visually-hidden" for="sorting">Сортировка</label>
+                <select class="select-control" id="sorting">
+                  <option value="cheap">Сначала дешёвое</option>
+                  <option value="expensive">Сначала дорогое</option>
+                  <option value="popular">Сначала популярное</option>
+                </select>
+                <button class="visually-hidden" type="submit">Сортировать</button>
+              </form>
+              <a href="#" class="button-view button-light">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+              <a class="button-view" href="#">
+                <span class="visually-hidden">Показать на всю страницу</span>
+              </a>
+              <a class="button-view" href="#">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </div>
             <ul class="catalog-card-list">
               <li class="product-card-item">
                 <h3 class="product-card-title heading-three">Amara Resort & Spa</h3>
