@@ -197,6 +197,7 @@
               <span class="phone-number"> +7 (812) 812-12-12</span>
             </a>
             <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+              <span class="visually-hidden">Логотип html academy.</span>
               <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="34"
                 viewBox="0 0 115 34" fill="#000" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)">
@@ -222,23 +223,43 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
-              <label for=" modal-text arrival-date">Дата заезда:</label>
-              <input class="auth-form-field field" type="text" id="arrival-date" name="arrival-date"
-                value="27 апреля 2020" placeholder="Дата заезда">
+            <p class="field-group arrival-date">
+              <label class="modal-text" for="arrival-date">Дата заезда:</label>
+              <input class="auth-form-field field field-arrival" type="text" id="arrival-date" name="arrival-date"
+                value="27 апреля 2020" placeholder="Введите дату заезда">
             </p>
-            <p class="field-group">
-              <label for="departure-date">Дата выезда:</label>
+            <p class="field-group departure-date">
+              <label class="modal-text" for="departure-date">Дата выезда:</label>
               <input class="auth-form-field field" type="text" id="departure-date" name="departure-date"
-                value="1 сентября 2023" placeholder="Дата выезда">
+                value="1 сентября 2023" placeholder="Введите дату выезда">
             </p>
             <p class="field-group">
-              <label for="number-adults">Взрослые:</label>
-              <input class="auth-form-field field" type="number" id="number-adults" name="number-adults" value="2">
+              <label class="modal-text" for="number-adults">Взрослые:</label>
+              <button type="button" class="button-minus" aria-label="Минус."></button>
+              <input class="auth-form-field field field-adult" type="number" id="number-adults" name="number-adults"
+                value="2">
+              <button type="button" class="button-plus" aria-label="Плюс."></button>
             </p>
             <p class="field-group">
-              <label for="number-children">Дети:</label>
-              <input class="auth-form-field field" type="number" id="number-children" name="number-children" value="2">
+              <label class="modal-text number-children" for="number-children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip">Укажите количество детей,<br> которые будут с вами, возраст
+                  которых от 6 до
+                  18
+                  лет. Дети<br> до 6 лет размещаются<br> бесплатно.</span>
+              </span>
+              </span>
+              <button type="button" class="button-minus" aria-label="Минус."></button>
+              <input class="auth-form-field field field-children" type="number" id="number-children"
+                name="number-children" value="2">
+              <button type="button" class="button-plus" aria-label="Плюс."></button>
             </p>
           </form>
           <button class="button button-second button-modal-search" type="submit">Найти</button>
