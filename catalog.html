@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
   </head>
 
   <body>
     <div class="page-container ">
       <header class="page-header">
-        <a class="logo-link" href="index.html"></a>
-        <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
+        <a class="logo-link" href="index.html">
+          <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -126,12 +127,14 @@
               <fieldset class="catalog-filter-group catalog-filter-group-price">
                 <legend class="catalog-filter-title ">Стоимость, ₽:</legend>
                 <div class="range-wrapper-inputs">
-                  <label class="visually-hidden" for="price-number-min">Минимальная стоимость число.</label>
-                  <input class="range-input range-input-min" type="number" id="price-number-min" value="0"
-                    placeholder="от">
-                  <label class="visually-hidden" for="price-number-max">Максимальная стоимость число.</label>
-                  <input class="range-input range-input-max" type="number" id="price-number-max" value="9000"
-                    placeholder="до">
+                  <span class="input-range-min">от
+                    <label class="visually-hidden" for="price-number-min">Минимальная стоимость.</label>
+                  </span>
+                  <input class="range-input range-input-min" type="number" id="price-number-min" value="0">
+                  <span class="input-range-max">до
+                    <label class="visually-hidden" for="price-number-max">максимальная стоимость.</label>
+                  </span>
+                  <input class="range-input range-input-max" type="number" id="price-number-max" value="9000">
                 </div>
                 <div class="range-scale">
                   <div class="range-bar" style="width:226px">
