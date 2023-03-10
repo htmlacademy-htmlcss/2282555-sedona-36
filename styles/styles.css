@@ -238,10 +238,10 @@ body {
 }
 
 .button-basic:hover,
-.button-basic:focus {
+.button-basic:focus-visible {
   color: #fff;
   background-color: #615048;
-  border: none;
+  outline: none;
 }
 
 .button-basic:active {
@@ -251,6 +251,10 @@ body {
 .button-basic:disabled {
   background-color: #E5E5E5;
   color: #fff;
+}
+
+.navigation-link.button:focus-visible {
+  outline: none;
 }
 
 .button-second {
@@ -674,12 +678,6 @@ body {
   flex-direction: column;
 }
 
-.button-modal-search {
-  width: 100%;
-  margin-top: 48px;
-  padding: 18px;
-}
-
 .modal {
   position: relative;
   margin: auto;
@@ -752,17 +750,23 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.auth-form {
+.field:focus-visible:not(:placeholder-shown) {
+  border-radius: 4px;
+  outline: 3px solid black;
+}
+
+.booking-form {
   display: grid;
   grid-template-columns: 247px 242px;
-  gap: 48px 88px;
+  gap: 23px 88px;
   border: none;
   margin: 0;
   padding: 0;
 }
 
 .arrival-date,
-.departure-date {
+.departure-date,
+.button-modal-search {
   grid-column: 1/-1;
   column-span: 2;
 }
@@ -832,6 +836,14 @@ body {
   min-width: 10px;
   height: 20px;
   text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.number-children,
+.number-adults {
+  pointer-events: none;
+  user-select: none;
 }
 
 .field-adults::-webkit-outer-spin-button,
@@ -844,7 +856,6 @@ body {
   -webkit-appearance: none;
 }
 
-
 .button-minus,
 .button-plus {
   border: none;
@@ -852,27 +863,50 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  padding: 10px 14px;
+  width: 40px;
+  height: 48px;
 }
 
+.modal-button-wrapper {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.button-minus-icon:hover,
-.button-plus-icon:hover {
+.button-minus:hover .button-minus-icon,
+.button-plus:hover .button-plus-icon {
   fill: #000;
 }
 
-.button-minus-icon:focus,
-.button-plus-icon:focus {
-  fill: #000;
-  border: 3px solid #82B3D3;
+.button-minus:focus-visible .modal-button-wrapper,
+.button-plus:focus-visible .modal-button-wrapper {
   border-radius: 4px;
+  outline: 3px solid #82B3D3;
+  border: none;
+}
+
+.button-minus:focus-visible .button-minus-icon,
+.button-plus:focus-visible .button-plus-icon {
+  fill: #000;
+}
+
+.button-minus:focus-visible,
+.button-plus:focus-visible {
   outline: none;
 }
 
-.button-minus-icon:active,
-.button-plus-icon:active {
+.button-minus:active .button-minus-icon,
+.button-plus:active .button-plus-icon {
   fill: #000;
   opacity: 0.3;
+}
+
+.button-modal-search {
+  width: 100%;
+  margin-top: 25px;
+  padding: 18px;
 }
 
 /*TOOLTIP*/
@@ -1051,6 +1085,10 @@ body {
 
 .filter-button-group {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter-button {
@@ -1161,24 +1199,40 @@ body {
   background-color: #E6E6E6;
 }
 
-.range-input:focus {
+.range-input-min:focus-visible {
+  border-radius: 4px 0 0 4px;
+  outline: 2px solid #83B3D3;
   background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
 }
 
-.range-input:active {
-  background-color: #F2F2F2;
-  outline: 3px solid #83B3D3;
-  border: none;
+.range-input-max:focus-visible {
+  border-radius: 0 4px 4px 0;
+  outline: 2px solid #83B3D3;
+  background-color: #E6E6E6;
 }
+
+.range-input-min:focus-visible:not(:placeholder-shown) {
+  border-radius: 4px 0 0 4px;
+  outline: 2px solid black;
+  background-color: #F2F2F2;
+}
+
+.range-input-max:focus-visible:not(:placeholder-shown) {
+  border-radius: 0 4px 4px 0;
+  outline: 2px solid black;
+  background-color: #F2F2F2;
+}
+
 
 .range-input-min {
   border-radius: 4px 0 0 4px;
   margin-right: 2px;
+  border: none;
 }
 
 .range-input-max {
   border-radius: 0 4px 4px 0;
+  border: none;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1260,6 +1314,36 @@ body {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
+
+.button-transparent {
+  background: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+}
+
+.button-transparent:hover {
+  background: none;
+  color: rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+.button-transparent:focus-visible {
+  background: none;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-transparent:active {
+  background: none;
+  color: rgba(255, 255, 255, 0.3);
+
+}
+
+.button-transparent:disabled {
+  color: rgba(255, 255, 255, 1);
+}
+
 
 /*sorting*/
 .sorting-block {
@@ -1360,31 +1444,6 @@ body {
 
 
 /*Product-list*/
-.button-transparent {
-  background: none;
-}
-
-.button-transparent:hover {
-  background: none;
-  color: rgba(255, 255, 255, 0.3);
-  border: none;
-}
-
-.button-transparent:focus-visible {
-  background: none;
-  outline: 3px solid #83B3D3;
-  border-radius: 4px;
-}
-
-.button-transparent:active {
-  background: none;
-  color: rgba(255, 255, 255, 0.3);
-
-}
-
-.button-transparent:disabled {
-  color: rgba(255, 255, 255, 1);
-}
 
 .catalog-card-list {
   margin: 0;

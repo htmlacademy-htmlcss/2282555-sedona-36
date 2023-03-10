@@ -127,14 +127,14 @@
               <fieldset class="catalog-filter-group catalog-filter-group-price">
                 <legend class="catalog-filter-title ">Стоимость, ₽:</legend>
                 <div class="range-wrapper-inputs">
-                  <span class="input-range-min">от
-                    <label class="visually-hidden" for="price-number-min">Минимальная стоимость.</label>
-                  </span>
-                  <input class="range-input range-input-min" type="number" id="price-number-min" value="0">
-                  <span class="input-range-max">до
-                    <label class="visually-hidden" for="price-number-max">максимальная стоимость.</label>
-                  </span>
-                  <input class="range-input range-input-max" type="number" id="price-number-max" value="9000">
+                  <span class="input-range-min" aria-hidden="true">от </span>
+                  <label class="visually-hidden" for="price-number-min">Минимальная стоимость.</label>
+                  <input class="range-input range-input-min" type="number" id="price-number-min" value="0"
+                    placeholder=" ">
+                  <span class="input-range-max" aria-hidden="true">до </span>
+                  <label class="visually-hidden" for="price-number-max">максимальная стоимость.</label>
+                  <input class="range-input range-input-max" type="number" id="price-number-max" value="9000"
+                    placeholder=" ">
                 </div>
                 <div class="range-scale">
                   <div class="range-bar" style="width:226px">
