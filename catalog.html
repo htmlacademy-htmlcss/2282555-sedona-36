@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
@@ -65,7 +65,8 @@
               </li>
               <li class="breadcrumbs-item">
                 <span class="breadcrumbs-link">Гостиницы</span>
-
+              </li>
+            </ol>
           </header>
           <section class="filters centering-container">
             <h2 class="visually-hidden">Список фильтров.</h2>
@@ -75,21 +76,23 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
+                      <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" value="1"
+                        checked>
                       <span class="control-mark"></span>
                       <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
+                      <input class="visually-hidden control-input" type="checkbox" name="parking-space" value="2"
+                        checked>
                       <span class="control-mark"></span>
                       <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="checkbox" name="swimming-pool">
+                      <input class="visually-hidden control-input" type="checkbox" name="wi-fi" value="3">
                       <span class="control-mark"></span>
                       <span class="control-label">Wi-Fi</span>
                     </label>
@@ -137,7 +140,7 @@
                     placeholder=" ">
                 </div>
                 <div class="range-scale">
-                  <div class="range-bar" style="width:226px">
+                  <div class="range-bar">
                     <button type="button" class="range-toggle range-toggle-min"></button>
                     <label class="visually-hidden" for="price-range-min">Минимальная стоимость ползунок.</label>
                     <input class="visually-hidden" type="range" id="price-range-min" min="1000" max="10000" step="1000">
@@ -161,9 +164,9 @@
             <form class="catalog-sorting">
               <label class="visually-hidden" for="sorting">Сортировка.</label>
               <select class="select-control" id="sorting">
-                <option value="cheap">Сначала дешёвое</option>
-                <option value="expensive">Сначала дорогое</option>
-                <option value="popular">Сначала популярное</option>
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
               </select>
               <button class="visually-hidden" type="submit">Сортировать.</button>
             </form>
@@ -274,7 +277,7 @@
         <section class="mailing">
           <h2 class="mailing-title heading-two">Подпишитесь на рассылку</h2>
           <p class="mailing-form text-discription">
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
           <form class="subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email-form">Адрес электронной почты.</label>
