@@ -26,7 +26,7 @@
               <span class="navigation-link navigation-link-current">Гостиницы</span>
             </li>
           </ul>
-          <ul class=" navigation-user">
+          <ul class="navigation-user">
             <li class="navigation-item ">
               <a class="navigation-button" href="#">
                 <svg class="header-icon" aria-hidden="true" focusable="false" width="19" height="19" viewBox="0 0 19 19"
@@ -128,7 +128,7 @@
                 </ul>
               </fieldset>
               <fieldset class="catalog-filter-group catalog-filter-group-price">
-                <legend class="catalog-filter-title ">Стоимость, ₽:</legend>
+                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <div class="range-wrapper-inputs">
                   <span class="input-range-min" aria-hidden="true">от </span>
                   <label class="visually-hidden" for="price-number-min">Минимальная стоимость.</label>
@@ -141,12 +141,14 @@
                 </div>
                 <div class="range-scale">
                   <div class="range-bar">
-                    <button type="button" class="range-toggle range-toggle-min"></button>
+                    <button class="range-toggle range-toggle-min" type="button"></button>
                     <label class="visually-hidden" for="price-range-min">Минимальная стоимость ползунок.</label>
-                    <input class="visually-hidden" type="range" id="price-range-min" min="1000" max="10000" step="1000">
-                    <button type="button" class="range-toggle range-toggle-max"></button>
+                    <input class="visually-hidden" type="range" id="price-range-min" min="1000" max="10000" step="1000"
+                      tabindex="-1">
+                    <button class="range-toggle range-toggle-max" type="button"></button>
                     <label class="visually-hidden" for="price-range-max">Максимальная стоимость ползунок.</label>
-                    <input class="visually-hidden" type="range" id="price-range-max" min="1000" max="10000" step="1000">
+                    <input class="visually-hidden" type="range" id="price-range-max" min="1000" max="10000" step="1000"
+                      tabindex="-1">
                   </div>
                 </div>
               </fieldset>
@@ -168,9 +170,9 @@
                 <option value="expensive">Сначала дорогие</option>
                 <option value="popular">Сначала популярные</option>
               </select>
-              <button class="visually-hidden" type="submit">Сортировать.</button>
+              <button class="visually-hidden" type="submit" tabindex="-1">Сортировать.</button>
             </form>
-            <a href="#" class="button-view button-view--active button-view--card">
+            <a class="button-view button-view--active button-view--card" href="#">
               <span class="visually-hidden">Показать карточки.</span>
             </a>
             <a class="button-view button-view--slideshow" href="#">
@@ -281,7 +283,7 @@
           </p>
           <form class="subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email-form">Адрес электронной почты.</label>
-            <input class="email-form" type="email" id="email-form" name="newsletter-email" placeholder="Ваш email"
+            <input class="email-form" type="email" id="email-form" name="newsletter-email" placeholder="Ваш e-mail"
               required>
             <button class="button button-second button-mailing" type="submit">Подписаться</button>
           </form>
@@ -323,9 +325,7 @@
                 </a>
               </li>
             </ul>
-            <a class="contacts-phone" href="tel:88128121212">
-              <span class="phone-number"> +7 (812) 812-12-12</span>
-            </a>
+            <a class="contacts-phone" href="tel:88128121212"> +7 (812) 812-12-12</a>
             <a class="htmlacademy-link" href="https://htmlacademy.ru/">
               <span class="visually-hidden">Логотип html academy.</span>
               <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="34"
