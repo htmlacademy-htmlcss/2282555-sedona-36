@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
     <div class="page-container ">
       <header class="page-header">
-        <a class="logo-link" href="index.html"></a>
-        <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
+        <a class="logo-link" href="index.html">
+          <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -64,7 +65,8 @@
               </li>
               <li class="breadcrumbs-item">
                 <span class="breadcrumbs-link">Гостиницы</span>
-
+              </li>
+            </ol>
           </header>
           <section class="filters centering-container">
             <h2 class="visually-hidden">Список фильтров.</h2>
@@ -74,23 +76,25 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="swimming-pool" checked>
-
-                      Бассейн
+                      <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" value="1"
+                        checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
-
-                      Парковка
+                      <input class="visually-hidden control-input" type="checkbox" name="parking-space" value="2"
+                        checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="Wi-Fi">
-
-                      Wi-Fi
+                      <input class="visually-hidden control-input" type="checkbox" name="wi-fi" value="3">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -100,40 +104,56 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="type-of-housing" value="hotel" checked>
-
-                      Гостиница
+                      <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="hotel"
+                        checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="type-of-housing" value="motel">
-
-                      Мотель
+                      <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="motel">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="type-of-housing" value="apartments">
-
-                      Апартаменты
+                      <input class="visually-hidden control-input" type="radio" name="type-of-housing"
+                        value="apartments">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title ">Стоимость</legend>
-                <label class="visually-hidden" for="price-number-min">Минимальная стоимость число.</label>
-                <input type="number" id="price-number-min" placeholder="от">
-                <label class="visually-hidden" for="price-number-max">Максимальная стоимость число.</label>
-                <input type="number" id="price-number-max" placeholder="до">
-                <label class="visually-hidden" for="price-range-min">Минимальная стоимость ползунок.</label>
-                <input type="range" id="price-range-min" min="1000" max="10000" step="1000">
-                <label class="visually-hidden" for="price-range-max">Максимальная стоимость ползунок.</label>
-                <input type="range" id="price-range-max" min="1000" max="10000" step="1000">
+              <fieldset class="catalog-filter-group catalog-filter-group-price">
+                <legend class="catalog-filter-title ">Стоимость, ₽:</legend>
+                <div class="range-wrapper-inputs">
+                  <span class="input-range-min" aria-hidden="true">от </span>
+                  <label class="visually-hidden" for="price-number-min">Минимальная стоимость.</label>
+                  <input class="range-input range-input-min" type="number" id="price-number-min" value="0"
+                    placeholder=" ">
+                  <span class="input-range-max" aria-hidden="true">до </span>
+                  <label class="visually-hidden" for="price-number-max">максимальная стоимость.</label>
+                  <input class="range-input range-input-max" type="number" id="price-number-max" value="9000"
+                    placeholder=" ">
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar">
+                    <button type="button" class="range-toggle range-toggle-min"></button>
+                    <label class="visually-hidden" for="price-range-min">Минимальная стоимость ползунок.</label>
+                    <input class="visually-hidden" type="range" id="price-range-min" min="1000" max="10000" step="1000">
+                    <button type="button" class="range-toggle range-toggle-max"></button>
+                    <label class="visually-hidden" for="price-range-max">Максимальная стоимость ползунок.</label>
+                    <input class="visually-hidden" type="range" id="price-range-max" min="1000" max="10000" step="1000">
+                  </div>
+                </div>
               </fieldset>
-              <button class="button button-second" type="submit">Применить</button>
-              <button class="button button-transparent" type="reset">Сбросить</button>
+              <div class="filter-button-group">
+                <button class="button button-second filter-button" type="submit">Применить</button>
+                <button class="button button-transparent" type="reset">Сбросить</button>
+              </div>
             </form>
           </section>
         </div>
@@ -144,9 +164,9 @@
             <form class="catalog-sorting">
               <label class="visually-hidden" for="sorting">Сортировка.</label>
               <select class="select-control" id="sorting">
-                <option value="cheap">Сначала дешёвое</option>
-                <option value="expensive">Сначала дорогое</option>
-                <option value="popular">Сначала популярное</option>
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
               </select>
               <button class="visually-hidden" type="submit">Сортировать.</button>
             </form>
@@ -257,7 +277,7 @@
         <section class="mailing">
           <h2 class="mailing-title heading-two">Подпишитесь на рассылку</h2>
           <p class="mailing-form text-discription">
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
           <form class="subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email-form">Адрес электронной почты.</label>
@@ -307,6 +327,7 @@
               <span class="phone-number"> +7 (812) 812-12-12</span>
             </a>
             <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+              <span class="visually-hidden">Логотип html academy.</span>
               <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="34"
                 viewBox="0 0 115 34" fill="#000" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)">

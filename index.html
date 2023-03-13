@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
@@ -96,7 +97,8 @@
             </li>
             <li class="advatages-item advatages-item-dark-blue">
               <div class="advantages-item-text">
-                <h3 class="advantages-title-white advantages-title heading-three advantages-underline-white">Там есть
+                <h3 class="advantages-title-white advantages-title heading-three advantages-underline-white">Там
+                  есть<br>
                   мост дьявола</h3>
                 <p class="advantages-discription advantages-discription-white">
                   Да, по нему можно пройти! Если вы осмелитесь, разумеется
@@ -147,11 +149,11 @@
         <section class="mailing mailing-index">
           <h2 class=".mailing-title mailing-title-index heading-two">Подпишитесь на рассылку</h2>
           <p class="mailing-form mailing-form-index text-discription">
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
           <form class="subscribtion-form-index" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email-form">Адрес электронной почты.</label>
-            <input class="email-form" type="email" id="email-form" name="newsletter-email" placeholder="Ваш email"
+            <input class="email-form" type="email" id="email-form" name="newsletter-email" placeholder="Ваш e-mail"
               required>
             <button class="button button-second button-mailing" type="submit">Подписаться</button>
           </form>
@@ -197,6 +199,7 @@
               <span class="phone-number"> +7 (812) 812-12-12</span>
             </a>
             <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+              <span class="visually-hidden">Логотип html academy.</span>
               <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="34"
                 viewBox="0 0 115 34" fill="#000" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)">
@@ -214,34 +217,84 @@
         </section>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-hotel-search">
-        <button class="modal-close-button">
+    <div class="modal-container modal-container-open">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
-              <label for=" modal-text arrival-date">Дата заезда:</label>
-              <input class="auth-form-field field" type="text" id="arrival-date" name="arrival-date"
-                value="27 апреля 2020" placeholder="Дата заезда">
-            </p>
-            <p class="field-group">
-              <label for="departure-date">Дата выезда:</label>
-              <input class="auth-form-field field" type="text" id="departure-date" name="departure-date"
-                value="1 сентября 2023" placeholder="Дата выезда">
-            </p>
-            <p class="field-group">
-              <label for="number-adults">Взрослые:</label>
-              <input class="auth-form-field field" type="number" id="number-adults" name="number-adults" value="2">
-            </p>
-            <p class="field-group">
-              <label for="number-children">Дети:</label>
-              <input class="auth-form-field field" type="number" id="number-children" name="number-children" value="2">
-            </p>
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="arrival-date">
+              <div class="field-group field-group-arrival">
+                <label class="modal-text" for="arrival-date">Дата заезда:</label>
+                <input class="field field-arrival" type="text" id="arrival-date" name="arrival-date"
+                  value="27 апреля 2020" placeholder="Укажите дату">
+              </div>
+              <span class="modal-text-error">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="departure-date">
+              <div class="field-group field-group-departure">
+                <label class="modal-text" for="departure-date">Дата выезда:</label>
+                <input class="field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023"
+                  placeholder="Укажите дату">
+              </div>
+              <span class="modal-text-correct">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="field-group">
+              <label class="modal-text number-adults" for="number-adults">Взрослые:</label>
+              <div class="field-group-adults">
+                <button type="button" class="button-minus" aria-label="Убрать место для взрослого.">
+                  <span class="modal-button-wrapper">
+                    <svg class="button-minus-icon" width="14" height="2" viewBox="0 0 14 2" fill="rgba(117, 97, 87,0.3)"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0v2h14V0H0Z" />
+                    </svg>
+                  </span>
+                </button>
+                <input class="field field-adults" type="number" id="number-adults" name="number-adults" value="2"
+                  tabindex="-1">
+                <button type="button" class="button-plus" aria-label="Добавить место для взрослого.">
+                  <span class="modal-button-wrapper">
+                    <svg class="button-plus-icon" width="14" height="14" viewBox="0 0 14 14"
+                      fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="modal-text number-children" for="number-children">Дети:</label>
+              <span class="tooltip">
+                <span class="tooltip-toggle" aria-labelledby="tooltip-children"> </span>
+                <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество детей, которые будут
+                  с вами, возраст
+                  которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+              <div class="field-group-children">
+                <button type="button" class="button-minus" aria-label="Убрать место для ребенка.">
+                  <span class="modal-button-wrapper">
+                    <svg class="button-minus-icon" width="14" height="2" viewBox="0 0 14 2" fill="rgba(117, 97, 87,0.3)"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0v2h14V0H0Z" />
+                    </svg>
+                  </span>
+                </button>
+                <input class="field field-children" type="number" id="number-children" name="number-children" value="2"
+                  tabindex="-1">
+                <button type="button" class="button-plus" aria-label="Добавить место для ребенка.">
+                  <span class="modal-button-wrapper">
+                    <svg class="button-plus-icon" width="14" height="14" viewBox="0 0 14 14"
+                      fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <button class="button button-second button-modal-search" type="submit">Найти</button>
           </form>
-          <button class="button button-second button-modal-search" type="submit">Найти</button>
         </section>
       </div>
     </div>
