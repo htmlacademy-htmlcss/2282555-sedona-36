@@ -330,14 +330,17 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 400px;
 }
 
 .advantages-discription {
+  margin: 0;
+  padding: 30px;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: #333333;
-  margin: 30px 85px 102px;
+  flex-grow: 1;
 }
 
 .advantages-discription-white {
@@ -346,13 +349,16 @@ img {
 
 .advantages-title {
   max-width: 175px;
-  padding: 102px 0 32px;
+  padding: 30px;
   margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
 }
 
 .advantages-title-white {
   color: #ffffff;
-  padding: 102px 0 32px;
+  padding: 30px;
   transform: translateX(-1px);
 }
 
@@ -425,7 +431,7 @@ img {
 }
 
 .service-title {
-  margin: 32px auto 29px;
+  margin: 32px auto 0;
 }
 
 .service-discription {
@@ -433,8 +439,8 @@ img {
   line-height: 21px;
   text-align: center;
   color: #333333;
-  max-width: 230px;
-  margin: 0 auto 82px;
+  margin: 0;
+  padding: 30px;
 }
 
 .service-list {
@@ -451,6 +457,7 @@ img {
   background-size: 75px 72px;
   background-position: center 81px;
   padding-top: 152px;
+  min-height: 234px;
 }
 
 .service-item--souvenirs,
@@ -474,7 +481,7 @@ img {
 /*search*/
 .hotels-search {
   padding-top: 95px;
-  padding-bottom: 96px;
+  padding-bottom: 95px;
 }
 
 .search-wrapper {
@@ -491,7 +498,7 @@ img {
 }
 
 .hotels-search-form {
-  margin: 20px auto 54px;
+  margin: 21px auto 54px;
 }
 
 .button-search {
@@ -695,9 +702,9 @@ img {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-open {
+/* .modal-container-open {
   display: flex;
-}
+} */
 
 .modal-content {
   display: flex;
