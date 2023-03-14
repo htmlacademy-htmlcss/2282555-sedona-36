@@ -11,8 +11,8 @@
 
   <body>
     <div class="page-container">
-      <header class="page-header">
-        <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
+      <header class="page-header centering-container">
+        <img class="logo-container" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -137,7 +137,7 @@
             </li>
           </ul>
         </section>
-        <section class="hotels-search">
+        <aside class="hotels-search">
           <div class="search-wrapper">
             <h2 class="hotels-search-title heading-two">Заинтересовались?</h2>
             <p class="hotels-search-form text-discription">
@@ -146,7 +146,7 @@
             </p>
             <a class="button button-basic button-search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
           </div>
-        </section>
+        </aside>
         <section class="mailing mailing-index">
           <h2 class="mailing-title-index heading-two">Подпишитесь на рассылку</h2>
           <p class="mailing-form mailing-form-index text-discription">
@@ -228,7 +228,7 @@
               <div class="field-group field-group-arrival">
                 <label class="modal-text" for="arrival-date">Дата заезда:</label>
                 <input class="field field-arrival" type="text" id="arrival-date" name="arrival-date"
-                  value="27 апреля 2020" placeholder="Укажите дату">
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
               </div>
               <span class="modal-text-error">Мы не можем отправить вас в прошлое.</span>
             </div>
@@ -236,7 +236,7 @@
               <div class="field-group field-group-departure">
                 <label class="modal-text" for="departure-date">Дата выезда:</label>
                 <input class="field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023"
-                  placeholder="Укажите дату">
+                  placeholder="Укажите дату" required>
               </div>
               <span class="modal-text-correct">На эти даты есть свободные номера. Пока есть.</span>
             </div>
@@ -252,7 +252,7 @@
                   </span>
                 </button>
                 <input class="field field-adults" type="number" id="number-adults" name="number-adults" value="2"
-                  tabindex="-1">
+                  tabindex="-1" required>
                 <button class="button-plus" type="button" aria-label="Добавить место для взрослого.">
                   <span class="modal-button-wrapper">
                     <svg class="button-plus-icon" width="14" height="14" viewBox="0 0 14 14"
@@ -281,7 +281,7 @@
                   </span>
                 </button>
                 <input class="field field-children" type="number" id="number-children" name="number-children" value="2"
-                  tabindex="-1">
+                  tabindex="-1" required>
                 <button class="button-plus" type="button" aria-label="Добавить место для ребенка.">
                   <span class="modal-button-wrapper">
                     <svg class="button-plus-icon" width="14" height="14" viewBox="0 0 14 14"

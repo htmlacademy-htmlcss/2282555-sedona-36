@@ -11,8 +11,8 @@
 
   <body>
     <div class="page-container ">
-      <header class="page-header">
-        <a class="logo-link" href="index.html">
+      <header class="page-header centering-container">
+        <a class="logo-container" href="index.html">
           <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
         </a>
         <nav class="navigation">
@@ -164,9 +164,9 @@
           <h2 class="visually-hidden">Cписок гостиниц.</h2>
           <div class="sorting-block">
             <p class="sorting-result heading-two">Найдено гостиниц: 38</p>
-            <form class="catalog-sorting">
+            <form class="catalog-sorting" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="sorting">Сортировка.</label>
-              <select class="select-control" id="sorting">
+              <select name="sorting" class="select-control" id="sorting">
                 <option value="cheap">Сначала дешевые</option>
                 <option value="expensive">Сначала дорогие</option>
                 <option value="popular">Сначала популярные</option>
@@ -185,9 +185,11 @@
           </div>
           <ul class="catalog-card-list">
             <li class="product-card-item">
-              <h3 class="product-card-title heading-three">Amara Resort & Spa</h3>
-              <img class="product-card-img" src="images/hotel-amara.jpg" alt="Звездное небо из пещеры." width="300"
-                height="212">
+              <a class="product-card-wrapper" href="#">
+                <h3 class="product-card-title heading-three">Amara Resort & Spa</h3>
+                <img class="product-card-img" src="images/hotel-amara.jpg" alt="Звездное небо из пещеры." width="300"
+                  height="212">
+              </a>
               <span>Гостиница</span>
               <span class="hotel-price">От 4000 ₽</span>
               <a class="button button-basic button-more " href="#">подробнее</a>
@@ -204,9 +206,11 @@
               <p class="rating-numeral">Рейтинг: 8,5</p>
             </li>
             <li class="product-card-item">
-              <h3 class="product-card-title heading-three">Villas at Poco Diablo</h3>
-              <img class="product-card-img" src="images/hotel-villas.jpg" alt="Радуга над горами." width="300"
-                height="212">
+              <a class="product-card-wrapper" href="#">
+                <h3 class="product-card-title heading-three">Villas at Poco Diablo</h3>
+                <img class="product-card-img" src="images/hotel-villas.jpg" alt="Радуга над горами." width="300"
+                  height="212">
+              </a>
               <span class="product-card-text">Гостиница</span>
               <span class="hotel-price product-card-text">От 5000 ₽</span>
               <a class="button button-basic button-more" href="#">подробнее</a>
@@ -223,9 +227,11 @@
               <p class="rating-numeral">Рейтинг: 9,2</p>
             </li>
             <li class="product-card-item">
-              <h3 class="product-card-title heading-three">Desert Quail Inn</h3>
-              <img class="product-card-img" src="images/hotel-desert.jpg" alt="Ясный день в горах." width="300"
-                height="212">
+              <a class="product-card-wrapper" href="#">
+                <h3 class="product-card-title heading-three">Desert Quail Inn</h3>
+                <img class="product-card-img" src="images/hotel-desert.jpg" alt="Ясный день в горах." width="300"
+                  height="212">
+              </a>
               <span class="product-card-text">Гостиница</span>
               <span class="hotel-price product-card-text">От 2500 ₽</span>
               <a class="button button-basic button-more" href="#">подробнее</a>
@@ -241,9 +247,11 @@
               <p class="rating-numeral">Рейтинг: 6,9</p>
             </li>
             <li class="product-card-item">
-              <h3 class="product-card-title heading-three">GreenTree Inn</h3>
-              <img class="product-card-img" src="images/hotel-greentree.jpg" alt="Звездное небо и горы." width="300"
-                height="212">
+              <a class="product-card-wrapper" href="#">
+                <h3 class="product-card-title heading-three">GreenTree Inn</h3>
+                <img class="product-card-img" src="images/hotel-greentree.jpg" alt="Звездное небо и горы." width="300"
+                  height="212">
+              </a>
               <span class="product-card-text">Гостиница</span>
               <span class="hotel-price product-card-text">От 1500 ₽</span>
               <a class="button button-basic button-more" href="#">подробнее</a>
