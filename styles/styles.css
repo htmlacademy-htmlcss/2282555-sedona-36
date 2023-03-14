@@ -702,9 +702,9 @@ img {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-/* .modal-container-open {
+.modal-container-open {
   display: flex;
-} */
+}
 
 .modal-content {
   display: flex;
