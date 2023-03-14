@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
   </head>
 
   <body>
     <div class="page-container">
-      <header class="page-header">
-        <img class="logo" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
+      <header class="page-header centering-container">
+        <img class="logo-container" src="images/sedona-logo.png" alt="Логотип города Седона." width="140" height="70">
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -71,7 +72,7 @@
                 <h3 class=" advantages-title advantages-title-white heading-three advantages-underline-white">Настоящий
                   городок</h3>
                 <p class="advantages-discription advantages-discription-white">
-                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                  Седона — не аттракцион для<br>туристов, там течёт своя<br>жизнь
                 </p>
               </div>
               <img class="sedona-street" src="images/photo-sedona-street.jpg" alt="Улица Седоны." width="800"
@@ -80,19 +81,19 @@
             <li class="advatages-item advantages-item-light-blue">
               <h3 class="advantages-title heading-three advantages-underline-black">Небольшая площадь</h3>
               <p class="advantages-discription">
-                Все достопримечательности находятся очень близко
+                Все достопримечательности<br> находятся очень близко
               </p>
             </li>
             <li class="advatages-item advantages-item-blue">
               <h3 class="advantages-title heading-three advantages-underline-black">Красивая дорога</h3>
               <p class="advantages-discription">
-                Ехать в Седону из Лас-Вегаса совсем не скучно!
+                Ехать в Седону из Лас-Вегаса<br> совсем не скучно!
               </p>
             </li>
             <li class="advatages-item advantages-item-light-blue">
               <h3 class="advantages-title heading-three advantages-underline-black">Мало туристов</h3>
               <p class="advantages-discription">
-                Большинство едет в Гранд Каньон и толпится там
+                Большинство едет в Гранд<br> Каньон и толпится там
               </p>
             </li>
             <li class="advatages-item advatages-item-dark-blue">
@@ -101,7 +102,7 @@
                   есть<br>
                   мост дьявола</h3>
                 <p class="advantages-discription advantages-discription-white">
-                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                  Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется
                 </p>
               </div>
               <img class="bridge" src="images/photo-devil-bridge.jpg" alt="Мост Дьявола." width="800" height="385">
@@ -125,18 +126,18 @@
             <li class="service-item service-item--food">
               <h3 class="service-title heading-three">Еда</h3>
               <p class="service-discription">
-                Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!
+                Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!
               </p>
             </li>
             <li class="service-item service-item--souvenirs">
               <h3 class="service-title heading-three">Сувениры</h3>
               <p class="service-discription">
-                Не только китайского,<br>но и настоящего местного производства!
+                Не только китайского,<br>но и настоящего местного<br>производства!
               </p>
             </li>
           </ul>
         </section>
-        <section class="hotels-search">
+        <aside class="hotels-search">
           <div class="search-wrapper">
             <h2 class="hotels-search-title heading-two">Заинтересовались?</h2>
             <p class="hotels-search-form text-discription">
@@ -145,9 +146,9 @@
             </p>
             <a class="button button-basic button-search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
           </div>
-        </section>
+        </aside>
         <section class="mailing mailing-index">
-          <h2 class=".mailing-title mailing-title-index heading-two">Подпишитесь на рассылку</h2>
+          <h2 class="mailing-title-index heading-two">Подпишитесь на рассылку</h2>
           <p class="mailing-form mailing-form-index text-discription">
             Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
@@ -195,9 +196,7 @@
                 </a>
               </li>
             </ul>
-            <a class="contacts-phone" href="tel:88128121212">
-              <span class="phone-number"> +7 (812) 812-12-12</span>
-            </a>
+            <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12 </a>
             <a class="htmlacademy-link" href="https://htmlacademy.ru/">
               <span class="visually-hidden">Логотип html academy.</span>
               <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="34"
@@ -229,7 +228,7 @@
               <div class="field-group field-group-arrival">
                 <label class="modal-text" for="arrival-date">Дата заезда:</label>
                 <input class="field field-arrival" type="text" id="arrival-date" name="arrival-date"
-                  value="27 апреля 2020" placeholder="Укажите дату">
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
               </div>
               <span class="modal-text-error">Мы не можем отправить вас в прошлое.</span>
             </div>
@@ -237,14 +236,14 @@
               <div class="field-group field-group-departure">
                 <label class="modal-text" for="departure-date">Дата выезда:</label>
                 <input class="field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023"
-                  placeholder="Укажите дату">
+                  placeholder="Укажите дату" required>
               </div>
               <span class="modal-text-correct">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <div class="field-group">
               <label class="modal-text number-adults" for="number-adults">Взрослые:</label>
               <div class="field-group-adults">
-                <button type="button" class="button-minus" aria-label="Убрать место для взрослого.">
+                <button class="button-minus" type="button" aria-label="Убрать место для взрослого.">
                   <span class="modal-button-wrapper">
                     <svg class="button-minus-icon" width="14" height="2" viewBox="0 0 14 2" fill="rgba(117, 97, 87,0.3)"
                       xmlns="http://www.w3.org/2000/svg">
@@ -253,8 +252,8 @@
                   </span>
                 </button>
                 <input class="field field-adults" type="number" id="number-adults" name="number-adults" value="2"
-                  tabindex="-1">
-                <button type="button" class="button-plus" aria-label="Добавить место для взрослого.">
+                  tabindex="-1" required>
+                <button class="button-plus" type="button" aria-label="Добавить место для взрослого.">
                   <span class="modal-button-wrapper">
                     <svg class="button-plus-icon" width="14" height="14" viewBox="0 0 14 14"
                       fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +272,7 @@
                   которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
               <div class="field-group-children">
-                <button type="button" class="button-minus" aria-label="Убрать место для ребенка.">
+                <button class="button-minus" type="button" aria-label="Убрать место для ребенка.">
                   <span class="modal-button-wrapper">
                     <svg class="button-minus-icon" width="14" height="2" viewBox="0 0 14 2" fill="rgba(117, 97, 87,0.3)"
                       xmlns="http://www.w3.org/2000/svg">
@@ -282,8 +281,8 @@
                   </span>
                 </button>
                 <input class="field field-children" type="number" id="number-children" name="number-children" value="2"
-                  tabindex="-1">
-                <button type="button" class="button-plus" aria-label="Добавить место для ребенка.">
+                  tabindex="-1" required>
+                <button class="button-plus" type="button" aria-label="Добавить место для ребенка.">
                   <span class="modal-button-wrapper">
                     <svg class="button-plus-icon" width="14" height="14" viewBox="0 0 14 14"
                       fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
