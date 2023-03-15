@@ -753,6 +753,7 @@ img {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  max-width: 513px;
 }
 
 .field {
